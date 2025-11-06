@@ -1,0 +1,44 @@
+.wrapper {
+  display: grid;
+  gap: 32px;
+}
+
+.header {
+  background: rgba(18, 23, 43, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 28px;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  color: var(--text-muted);
+}
+
+.meta {
+  display: grid;
+  gap: 12px;
+}
+
+.tags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(124, 92, 255, 0.18);
+  color: var(--primary-text);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
