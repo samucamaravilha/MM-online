@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import clsx from 'clsx';
 import { showToast } from '@/components/Toaster';
@@ -45,6 +45,10 @@ export function ProjectSharingPanel({
   const [inviteEmail, setInviteEmail] = useState('');
   const [inviteRole, setInviteRole] = useState<'viewer' | 'editor'>('viewer');
   const [linkRole, setLinkRole] = useState<'viewer' | 'editor'>(shareRole ?? 'viewer');
+
+  useEffect(() => {
+    setLinkRole(shareRole ?? 'viewer');
+  }, [shareRole]);
 
   async function toggleShareLink(enable: boolean) {
     if (!isOwner) {
