@@ -1,0 +1,83 @@
+:root {
+  color-scheme: light dark;
+  --background: #0c0e16;
+  --surface: #12172b;
+  --surface-alt: #1b2140;
+  --primary: #7c5cff;
+  --primary-muted: rgba(124, 92, 255, 0.12);
+  --primary-text: #ffffff;
+  --text: #d7dcff;
+  --text-muted: #9aa3d8;
+  --border: rgba(255, 255, 255, 0.08);
+  --danger: #ff6b6b;
+  --success: #4cd7a8;
+  --warning: #ffc857;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at 10% 20%, rgba(124, 92, 255, 0.35), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(76, 215, 168, 0.25), transparent 35%),
+    var(--background);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-muted);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.08), rgba(76, 215, 168, 0.05));
+  pointer-events: none;
+}
+
+main {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+}
